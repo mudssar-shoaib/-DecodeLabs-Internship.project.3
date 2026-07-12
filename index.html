@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Hub — DecodeLabs Project 3</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">⚡ Interactive<span>Hub</span></div>
+    <ul class="nav-links">
+      <li><a href="#counter">Counter</a></li>
+      <li><a href="#todo">To-Do</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#quote">Quotes</a></li>
+      <li><a href="#calc">Calculator</a></li>
+    </ul>
+    <button id="themeToggle" class="theme-btn" title="Toggle dark mode">🌙</button>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Bring the Web to <span class="grad">Life</span></h1>
+    <p>Creating fast, responsive, and visually stunning websites that leave a lasting impression</p>
+    <button class="cta" onclick="document.getElementById('counter').scrollIntoView({behavior:'smooth'})">Explore ↓</button>
+  </header>
+
+  <!-- COUNTER -->
+  <section id="counter" class="card">
+    <h2>🔢 Live Counter</h2>
+    <p class="muted">Click the buttons to update the value in real-time.</p>
+    <div class="counter-box">
+      <button class="btn danger" id="decBtn">−</button>
+      <span id="countValue">0</span>
+      <button class="btn success" id="incBtn">+</button>
+    </div>
+    <button class="btn ghost" id="resetBtn">Reset</button>
+  </section>
+
+  <!-- TODO -->
+  <section id="todo" class="card">
+    <h2>✅ To-Do List</h2>
+    <p class="muted">Add, complete and delete tasks. Saved in your browser.</p>
+    <div class="todo-input">
+      <input type="text" id="todoInput" placeholder="What needs to be done?" />
+      <button class="btn primary" id="addTodo">Add</button>
+    </div>
+    <ul id="todoList" class="todo-list"></ul>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="card">
+    <h2>🖼️ Dynamic Image Gallery</h2>
+    <p class="muted">Click any thumbnail to preview. Use filter buttons to change categories.</p>
+    <div class="filters">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="nature">Nature</button>
+      <button class="chip" data-filter="city">City</button>
+      <button class="chip" data-filter="tech">Tech</button>
+    </div>
+    <div class="gallery" id="galleryGrid"></div>
+    <div class="lightbox" id="lightbox">
+      <span class="close" id="lbClose">&times;</span>
+      <img id="lbImg" alt="preview" />
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section id="quote" class="card">
+    <h2>💬 Quote Generator</h2>
+    <blockquote id="quoteText">"Click the button to inspire yourself."</blockquote>
+    <cite id="quoteAuthor">— Anonymous</cite>
+    <br />
+    <button class="btn primary" id="newQuote">New Quote</button>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section id="calc" class="card">
+    <h2>🧮 Mini Calculator</h2>
+    <div class="calc">
+      <input type="text" id="calcDisplay" readonly value="0" />
+      <div class="calc-grid">
+        <button class="ck ghost">C</button>
+        <button class="ck ghost">(</button>
+        <button class="ck ghost">)</button>
+        <button class="ck op">/</button>
+        <button class="ck">7</button><button class="ck">8</button><button class="ck">9</button><button class="ck op">*</button>
+        <button class="ck">4</button><button class="ck">5</button><button class="ck">6</button><button class="ck op">-</button>
+        <button class="ck">1</button><button class="ck">2</button><button class="ck">3</button><button class="ck op">+</button>
+        <button class="ck zero">0</button><button class="ck">.</button><button class="ck eq">=</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built with ❤️ for DecodeLabs Project 3 — Frontend Interactive Web Elements</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
